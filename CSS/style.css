@@ -1,0 +1,1048 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;700&display=swap');
+
+:root {
+    --primary: #f8a551;
+    --dark:#090a0a;
+    --body: #fff;
+    --box-shadow: 0 8px 22px rgba(0,0,0,0.1);
+    --slate-gray: #708090;  /* Slate Gray */
+    --crisp-white: #FFF1E6;
+}
+
+body{
+    font-family: Sora, "sans-serif";
+    line-height: 1.7;
+    color: var(--body);
+    background-color: var(--crisp-white);
+}
+/* ngjyra e our servces*/
+h1,h2,h3.display-4{
+    color: var(--dark);
+}
+/* fund ngjyra*/
+a{
+    color: var(--dark);
+    text-decoration: none;
+ }
+
+ .img{
+    width: 100%;
+ }
+
+.navbar{
+    background-color: transparent !important; /* Ensures the navbar is transparent */
+    position: fixed;
+    width: 100%; /* Navbar spans the full width */
+    top: 0; /* Fixed at the top */
+    z-index: 10; /* Higher z-index to keep it above other content */
+    border: none; /* Removes any default border */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s, padding 0.3s;
+    padding: 0.5rem 0; 
+    border-bottom: 1px solid #c6ffff; /* White border line at the bottom */
+}
+/* Scrolled state */
+.navbar.scrolled {
+    background: linear-gradient(to bottom, #f8f8f8 0%, #f8a551 100%) !important; /* Semi-transparent black */
+    padding: 0.25rem 0;
+}
+
+.navbar .container .navbar .container-fluid {
+  display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.navbar-nav{
+    margin: 0 auto;
+}
+
+/* This centers the navbar items within the navbar */
+ .navbar-collapse {
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.navbar-nav {
+    margin-left: auto;
+    margin-right: auto;
+}
+.ml-auto {
+    margin-left: auto;
+}
+
+
+/* Ensures the navigation items are properly aligned and styled */
+.navbar-nav:last-child {
+    margin-left: auto;  /* Pushes the last 'ul' to the right */
+    margin-right: 0;
+}
+
+
+.navbar .navbar-nav .nav-link{
+    color: black; 
+    font-weight: 700; 
+    margin-right: 30px;
+}
+
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link:focus {
+    color: rgba(255, 255, 255, 0.633); /* Lighter color on hover/focus for a subtle effect */
+}
+
+/* Styles specifically for the 'Kontakt' link */
+
+.navbar .contact-button{
+    background: linear-gradient(to bottom, #fafafa 0%, #f8a551 100%) !important; /* Semi-transparent black */
+    color: black;
+    padding: 10px 20px ;
+    border-radius: 30px;
+    border: none; /* Remove any default border that might be applied */
+    font-size: 1rem; /* Adjust font size as needed */
+    font-weight: bold; /* Make the font bold to stand out */
+    text-transform: uppercase; /* UPPERCASE text for a more button-like appearance */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions for interactions */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Subtle shadow for 3D effect */
+    text-decoration: none; /* Remove underline from link */
+    display: inline-block; /* Ensure it's aligned properly without breaking the flow */
+    min-width: 130px;
+    align-items: center;
+    text-align: center;
+}
+
+.navbar .contact-button:hover, .navbar .contact-button:focus {
+    background: linear-gradient(to bottom, #f9f9f9 0%, #e89745 100%) !important; /* Darker gradient on hover/focus */
+    color: #ffffff; /* Keep text color white on hover/focus */
+    transform: translateY(-2px); /* Slight raise effect on hover */
+    box-shadow: 0 6px 8px rgba(0,0,0,0.15); /* Larger shadow on hover for more depth */
+    text-decoration: none; /* Ensure no underline on hover */
+}
+
+
+/*  */
+/* .navbar-extra-icons { */
+    /* display: flex; */
+    /* align-items: center; */
+/* } */
+/*  */
+/* .navbar-icon-link { */
+    /* padding: 0 10px; *
+    color: #fff; Change color as needed
+/* } */
+/*  */
+/* .navbar-icon-link:hover { *
+    color: #ccc; Change hover color as needed
+/* } */
+
+
+/*madhesianenlogos foto n fund */
+.logo{
+    height: 130px;
+    width: auto;
+}
+/*fund logo*/
+
+.btn{
+    padding: 14px 18px;
+    border-width: 2px;
+    border-radius: 0;
+}
+/* logo nis*/
+
+.brand h1{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: #222222;
+    padding-top: 35px;
+    padding-bottom:0px ;
+    font-style: italic;
+}
+
+.brand h1 span{
+    color: #fc7a015c;
+}
+
+/*logo fund*/
+/* nis foto background n nav*/
+
+.container{
+    background-position: top center;
+    background-size: cover;
+    background-attachment:fixed;
+    position: relative;
+    z-index: 1;
+   
+}
+
+
+
+.hero::after{
+content: '';
+width: 100%;
+height: 100%;
+position: absolute;
+top: 0;
+left: 0;
+background-color: rgba(53, 61, 62, 0.295);
+z-index: -1;
+} 
+
+#hero h1:nth-child(1){
+    animation-delay: 1s;
+}
+#hero h1:nth-child(2){
+    animation-delay: 2s;
+}
+#hero h1:nth-child(3){
+    animation: text_reveal_name .5s ease forwards;
+    animation-delay: 3s;
+}
+
+#hero h1 span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background: linear-gradient(to bottom, #f9f9f9 0%, #4abede 100%) !important; 
+    animation: text_reveal_box 1s ease;
+    animation-delay: 1s;
+}
+
+#hero h1:nth-child(1) span{
+    animation-delay: .5s;
+}
+#hero h1:nth-child(2) span{
+    animation-delay: 1.5s;
+}
+#hero h1:nth-child(3) span{
+    animation-delay: 2.5s;
+}
+  
+#hero .cta{
+    font-weight: 600;
+    display: inline-block;
+    padding: 10px 30px;
+    color: #ffffff;
+    background-color: transparent;
+    border: 2px solid #ff9d00;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    margin-top: 36px;
+    transition: .3s ease background-color, color;
+}
+
+#hero .cta:hover{
+    color: #fff;
+    background: linear-gradient(to bottom, #f59c58 0%, #e89745 100%) !important; 
+}
+
+/* fund hero*/
+/*nis keyframes*/
+@keyframes text_reveal_box{
+    50%{
+        width: 100%;
+        left: 0;
+    }
+    100% {
+        width:0;
+        left: 100%;
+    }
+}
+
+@keyframes text_reveal{
+    100%{
+        color: #fff;
+    }
+}
+
+@keyframes text_reveal_name{
+    100%{
+        color: #eb8724 ;
+        font-weight: 600;
+    }
+}
+
+
+
+
+/*
+@keyframes slideInLeft{
+    from{
+        transform: translateX(-300px);
+    }
+    to{
+        transform:translateX(0);
+    }
+
+}
+
+
+.innen-1{
+    animation-name:slideInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-delay: 1s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: none;
+
+    transform: translateX(-150px); 
+
+*/
+
+/* fund keyframe */
+
+#services h5 {
+    font-size: 1.25rem; /* Larger than default for visibility */
+    color: #ff8c00; /* Example: Bootstrap primary blue, adjust as needed */
+    font-weight: bold; /* Makes the text bold */
+    margin-bottom: 10px; /* Space between the heading and any following content */
+}
+#services p {
+    font-size: 1rem;
+    color: #666; /* Lighter grey for readability */
+    line-height: 1.6; /* Increases the line height for better readability */
+    text-align: justify; /* Justifies the paragraph text */
+    margin-bottom: 15px; /* Adds space below each paragraph */
+}
+
+
+section{
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.card-effect{
+    box-shadow: var(--box-shadow);
+    background-color: #ffffff;
+    padding: 25px;
+    transition: all 0,35s ease;
+}
+
+.card-effect:hover {
+    box-shadow: none;
+    transform: translateY(5px);
+}
+
+.iconbox{
+    width: 54px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary);
+    color: #fff;
+    font-size: 32px;
+    border-radius: 100px;
+}
+
+.service{
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 30px;
+    margin: 0 20px;
+    background-size: cover;
+    background-position: center;
+    transition: all 0.3s ease;
+    padding: 20px;
+    color: #fff;
+    border-radius: 20px;
+}
+
+#service1 { background: url(images.png/1.png);}
+#service2 { background: url(images.png/bateri.png);
+background-size: contain;
+}
+
+
+.service::after{
+content: '';
+width: 100%;
+height: 100%;
+position: absolute;
+top:-100px;
+left: 0;
+background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+z-index: -1;
+opacity: 0;
+transition: all 0.4s ease;
+}
+
+.service:hover {
+    /* Example hover effect: scales the service slightly */
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3); /* Add shadow for depth */
+}
+
+ .service:hover .iconbox{
+    background-color: #ffffff;
+    background: linear-gradient(to bottom, #679bce 0%, #e89745 100%) !important ;
+ }
+
+ .service:hover::after{
+    opacity: 1;
+    top: 0;
+ }
+
+ .fade-in {
+    opacity: 0;
+    transform: translateY(50px); /* Start from slightly below */
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    transition-delay: 0s;
+}
+
+.fade-in.fade-in-show {
+    opacity: 1;
+    transform: translateY(0); /* Move to original position */
+}
+
+#service3 { transition-delay: 0.2s; }
+#service4 { transition-delay: 0.4s; }
+
+
+#services h1 {
+    font-weight: 600;
+    color: #656766;
+    position: relative;
+    display: inline-block; /* Allows the line to fit the content's width */
+    padding: 0 20px; /* Spacing around the text */
+    margin: 0 10px; /* Spacing between text and lines */
+}
+
+#services h1::before, #services h1::after {
+    content: '';
+    position: absolute;
+    top: 50%; /* Align vertically */
+    width: 40px; /* Line width */
+    height: 2px; /* Line height */
+    background: #e09200; /* Line color */
+    transform: translateY(-50%); /* Center vertically */
+}
+
+#services h1::before {
+    left: -30px; /* Position before the text */
+}
+
+#services h1::after {
+    right: -30px; /* Position after the text */
+}
+
+
+ .btn-primary {
+    background: linear-gradient(to bottom, #f7d9bb  0%, #f47a00 100%) !important ;;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none; /* Removes underline from links */
+    display: inline-block; /* Allows padding and width adjustments */
+    border-radius: 10px; /* Rounded corners */
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover, .btn-primary:focus {
+    background-color: darken(var(--primary), 10%); /* Darker shade on hover/focus */
+    color: white; /* Ensures text color remains consistent */
+}
+
+/*  */
+ /* .col-img{ */
+    /* background-image: url(images.png/whoarewe.png); */
+    /* background-position: center; */
+    /* background-size: cover; */
+   /* min-height: 500px; */
+/*     */
+ /* } */
+/*  */
+
+ .project {
+    position: relative;
+    overflow: hidden;
+ }
+
+ .project .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(53, 61, 62, 0.295);
+    padding: 30px;
+    display: flex;
+    align-items: flex-end;
+    transition: all 0.4s ease;
+    opacity: 0;
+ }
+
+ .project img{
+    transition: all 0.4s ease;
+ }
+
+ .project:hover .overlay{
+    opacity: 1;
+ }
+
+ .project:hover img {
+    transform: scale(1.1);
+ }
+
+ form input.form-contro{
+    height: 56px;
+ }
+
+ form .form-control{
+    border: transparent;
+    border-radius: 0;
+    background-color: rgba(0,0,0,0.02);
+ }
+
+ .footer-top {
+    padding-bottom: 90px;
+    padding: 90px;
+    background-color: var(--dark);
+ }
+
+.footer-top a{
+    color: var(--body);
+}
+
+.footer-top a:hover{
+    color: #fff;
+}
+
+.footer-bottom{
+    background-color: #242933;
+}
+
+#banner {
+    background:linear-gradient(to top, #f9e6d2  0%, #697177 100%) !important ;; /* A light grey background, adjust as needed */
+    padding: 30px 0; /* Padding for spacing around the content */
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 0;
+}
+
+h4 {
+    color: #FFF; /* Example color, adjust as needed */
+    font-size: 1.5rem; /* Larger text for better visibility */
+    font-weight: bold; /* Make the header bold */
+    margin-bottom: 20px; /* Space below the header */
+    text-align: left; /* Center the text horizontally */
+    overflow-wrap: break-word; /* Ensures words break to avoid overflow */
+}
+
+.content{
+    margin-left: 100px;
+}
+
+.content p {
+    color: #ffffff; /* Match text color with h4 */
+    font-size: 1rem; /* Set an appropriate font size */
+    margin-bottom: 20px; /* Match bottom margin with h4 */
+    text-align: left; /* Align text to the left, same as h4 */
+    overflow-wrap: break-word; /* Ensures words break to avoid overflow */
+}
+
+.banner .content button {
+ width: 100%;
+ margin-bottom: 30px;
+ background: linear-gradient(to bottom, #f7d9bb  0%, #f47a00 100%) !important ;
+    color: #ffffff; /* White text color */
+    border: none; /* No border unless desired */
+    padding: 10px 20px; /* Adjust padding to fit your design */
+    font-size: 1rem; /* Set a font size */
+    cursor: pointer; /* Changes the cursor to a pointer to indicate it's clickable */
+    border-radius: 8px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition for background color change */
+}
+.banner .content button:hover {
+    background-color: #ecf7ff; /* Simple color change for hover, not gradient */
+}
+
+.banner .content button:active {
+    background-color: #1b4f72; /* Even darker blue for when the butto*/
+}
+.container2 {
+    padding-top: 60px;
+    max-height: fit-content;
+    margin-right: 10px;
+    display: flex;
+    align-items: flex-start; /* Align items vertically */
+    justify-content: space-between; /* Space between text and image */
+    max-width: 1400px; /* Max width of the container */
+    padding: 0 40px; /* Padding on the sides */
+}
+
+.content .banner-image {
+    flex: 1 1 40%; /* Takes as much space as it can */
+}
+
+
+.banner-image img {
+    width: 70%; /* Ensures the image is responsive */
+    height: 450px; /* Maintains the aspect ratio */
+    max-height: 450px;
+}
+
+.image-container {
+    display: flex;
+    flex-direction: row; /* Set images side by side */
+    align-items: flex-start; /* Align images to the start of the container vertically */
+    justify-content: flex-start; /* Align images to the left of the container horizontally */
+    gap: 10px; /* This adds space between the images */
+
+}
+
+.image-container .small-image {
+    width: 200px; /* Ensure this matches the button's width if needed */
+    height: 210px; /* Maintain aspect ratio */
+}
+
+
+
+.image-container2 {
+    display: flex;
+    justify-content: center; /* Center the images horizontally */
+    gap: 20px; /* Spacing between images */
+    margin-top: 20px; /* Space between text and images */
+}
+
+
+
+.small-image {
+    width: auto; /* Maintain aspect ratio */
+    height: 100px; /* Example height, adjust as needed */
+    /* max-width: 100%; Ensure it doesn't overflow its container */
+}
+
+.fade-in {
+    opacity: 0; /* Initially hide the elements */
+    transition: opacity 0.5s ease-out; /* Animation effect for fading in */
+}
+
+.fade-in-show {
+    opacity: 1; /* Fully show the element */
+}
+
+
+@media (max-width: 768px) {
+
+    #banner{
+        margin-left: 22px;
+    }
+
+    h4 {
+        
+        font-size: 1.2rem; /* Smaller font size for mobile devices */
+        max-width: 100%; /* Allows more flexibility on smaller screens */
+    }
+   .content p {
+        font-size: 0.9rem; /* Slightly smaller font size for mobile devices */
+        text-align: left; /* Center align the text on smaller screens, same as adjusted h4 */
+    }
+
+    .content button {
+        margin-bottom: 20px;
+        flex-shrink: 0; /* Prevent the button from shrinking */
+        white-space: nowrap; /* Keep the button text on one line */
+    }
+
+
+    .container2 {
+        flex-direction: column;  /* Stack elements vertically on small screens */
+        padding: 0 30px;  /* Adjust padding for smaller screens */
+        align-items: end;
+    }
+
+    .content, .banner-image {
+        max-width: 100%;  /* Allow content and images to fill the container */
+    }
+
+    .banner-image img{
+        margin-top: 20px;  /* Space above the image when stacked */
+        height: 100%;
+    }
+
+    .image-container2 {
+        flex-direction: column;  /* Stack images vertically on smaller screens */
+    }
+
+    .small-image {
+        height: 80px;  /* Smaller image height on mobile devices */
+    }
+    
+
+    
+}
+
+/* five stars */
+#features {
+    margin-top: 0;
+    margin-bottom: 0;
+    align-items: center; /* Centers vertically in the viewport */
+    justify-content: center; /* Centers horizontally */
+    text-align: center; /* Ensures text within is centered */
+    padding: 0;
+    margin: 0 auto;
+}
+
+#features .container4 { /* Allows the container to fill the space in the flex parent */
+    flex-direction: column;
+    justify-content: center; /* Center content vertically within the container */
+    align-items: center; /* Center content horizontally */
+}
+
+#features h1 {
+    font-weight: 600;
+    color: #656766;
+    position: relative;
+    display: inline-block; /* Allows the line to fit th*/
+    padding: 0 20px; /* Spacing around the text */
+    margin: 0 10px; /* Spacing between text and lines */
+    z-index: 1;
+}
+
+#features h1::before, #features h1::after {
+    content: '';
+    position: absolute;
+    top: 50%; /* Align vertically */
+    width: 40px; /* Line width */
+    height: 2px; /* Line height */
+    background: #e09200; /* Line color */
+    transform: translateY(-50%); /* Center vertically */
+}
+
+#features h1::before {
+    left: -30px; /* Position before the text */
+}
+
+#features h1::after {
+    right: -30px; /* Position after the text */
+}
+#features p {
+    color: rgb(117, 116, 116);
+}
+
+#features .container4 .text-center > p {
+    margin-top: 15px;
+    margin-bottom: 30px; /* Increase the bottom margin to add more space */
+    text-align: center; /* Ensures the text is centered if not already */
+}
+
+
+.review-container {
+    margin-left: 20px;
+    margin-right: 20px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 150px;  /* Adjust height for a more rectangular appearance */
+    width: 100%;    /* Take full width of the column */
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.review-stars {
+    color: rgb(244, 176, 28);
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.review-text, .reviewer-name {
+    margin: 0;
+    padding: 0;
+}
+
+.review-text {
+    flex-grow: 1;
+    font-size: 0.9rem;
+}
+
+.reviewer-name {
+    font-size: 0.8rem;
+    font-style: italic;
+    margin-top: 5px;
+}
+
+.review-container p {
+    font-size: 0.9rem; /* Smaller font size for the text */
+    color: #333; /* Dark grey color for better readability */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.feature-animate {
+    opacity: 0;  /* Start from invisible to ensure it does not show before animation */
+    transform: translateY(20px);  /* Start below its final position */
+    animation: fadeIn 1s ease-out forwards;  /* Define the animation with duration, timing function, and fill mode */
+    will-change: opacity, transform;  /* Optimize performance for opacity and transform changes */
+}
+
+/* Additional Content Section Styles */
+#additional-content {
+    border-radius: 15px;
+    background:linear-gradient(to top,#697177   0%, #f9e6d2  100%) !important ;; /* A light grey background, adjust as needed */
+    color: #333; /* Dark text for readability */
+    padding-top: 50px; /* Space above the content */
+    padding-bottom: 50px; /* Space below the content */
+}
+
+#additional-content h2 {
+    color: #fcfdff; /* Stylish blue for headings */
+    margin-bottom: 20px; /* Space below headings */
+    font-weight: 600;
+}
+
+#additional-content ul {
+    padding-left: 20px; /* Proper indentation for list */
+}
+
+#additional-content li {
+    margin-bottom: 10px; /* Space between list items */
+}
+
+#additional-content .btn-primary {
+    background-color: #007BFF; /* Blue background for button */
+    color: white; /* White text for the button */
+    border: none; /* No border for a cleaner look */
+    padding: 10px 20px; /* Padding inside the button */
+    text-transform: uppercase; /* Uppercase text for the button */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+#additional-content .btn-primary:hover {
+    background-color: #0056b3; /* Darker blue when hovered */
+}
+
+/* Responsive image settings */
+#additional-content img {
+    max-width: 100%; /* Full width on smaller screens */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 20px; /* Space below the image */
+}
+
+/*sola infromation style */
+/* General page styles to match the home page */
+/* General page styles to match the home page */
+body {
+    font-family: 'Sora', sans-serif;
+    background-color: var(--crisp-white);
+    color: var(--dark);
+    line-height: 1.6;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    padding: 20px 0;
+}
+
+header h1 {
+    color: var(--primary);
+    font-size: 2.5rem;
+}
+
+main section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+}
+
+main h2 {
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+main p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+main img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+footer {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 1rem;
+}
+
+footer a {
+    color: var(--dark);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Button styles to encourage further learning or contact */
+.main-button {
+    display: block;
+    width: 200px;
+    background: var(--primary);
+    color: #fff;
+    text-align: center;
+    padding: 10px 20px;
+    margin: 20px auto;
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.main-button:hover {
+    background-color: var(--dark);
+}
+
+/* Responsive adjustments for larger screens */
+@media (min-width: 992px) {
+    main section {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: start;
+    }
+
+    main img {
+        max-width: 50%; /* Limits the image size to half of the container width */
+        margin-right: 20px;
+    }
+
+    main p {
+        width: 45%; /* Ensures text does not stretch too wide */
+    }
+}
+
+/* Responsiveness for better mobile viewing */
+@media (max-width: 768px) {
+    main section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    main img {
+        max-width: 100%; /* Allows the image to expand to full container width on smaller screens */
+    }
+}
+
+
+/* exterio */
+.exterior-service {
+    margin-bottom: 40px;
+    background: #ffffff; /* Match the light and clean theme of the homepage */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow); /* Utilize existing shadow variable for consistency */
+}
+
+.exterior-service img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Light shadow for depth */
+}
+
+.exterior-service h2 {
+    color: var(--dark); /* Use the primary text color variable */
+    margin-bottom: 15px; /* Spacing after the header */
+}
+
+.exterior-service p {
+    font-size: 1rem;
+    color: var(--slate-gray); /* Slightly softer than the primary dark color */
+}
+
+@media (min-width: 768px) {
+    .exterior-service {
+        display: flex;
+        align-items: center; /* Align items in a row at larger screen sizes */
+        padding: 20px 40px; /* Increased padding for larger screens */
+    }
+
+    .exterior-service img {
+        width: 40%; /* Smaller width for images to balance with text */
+        margin-right: 20px; /* Space between the image and the text */
+    }
+
+    .exterior-service p {
+        flex: 1; /* Allows text to fill remaining space */
+    }
+}
+
+/* fund exterio */
+
+/* interio*/
+.interior-service {
+    margin-bottom: 40px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+}
+
+.interior-service img {
+    width: 100%;
+    max-width: 300px; /* Adjust width for large screens */
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.interior-service h2 {
+    color: var(--dark);
+    margin-bottom: 15px;
+}
+
+.interior-service p {
+    font-size: 1rem;
+    color: var(--slate-gray);
+}
+
+@media (min-width: 768px) {
+    .interior-service {
+        display: flex;
+        align-items: center;
+        padding: 20px 40px;
+    }
+
+    .interior-service img {
+        width: 40%;
+        margin-right: 20px;
+    }
+
+    .interior-service p {
+        flex: 1;
+    }
+}
+
+/*fund interio*/

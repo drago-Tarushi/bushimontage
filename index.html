@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="/image.html/solalogo.png">
+    <meta name="description"
+        content="Wir revolutionieren die Energieversorgung mit zukunftsweisenden Solarenergielösungen, die umweltfreundlich sind und nachhaltigen Fortschritt für Haushalte und Unternehmen gewährleisten.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="CSS/style.css">
+
+    <title>BushiSolar</title>
+    <style>
+        html,
+        body {
+            scroll-behavior: smooth;
+        }
+
+        .project img {
+            height: 100%;
+            width: 100%;
+        }
+
+
+        #hero {
+            background-image: url(image.html/solar_logo.png);
+            /* Adjust the image path as needed */
+            background-size: cover;
+            background-position: top center;
+            background-attachment: fixed;
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            position: relative;
+            align-items: center;
+            overflow: hidden;
+
+        }
+
+
+
+
+        #hero .container {
+            text-align: center;
+            background-color: rgba(34, 39, 40, 0.295);
+            padding: 0 50px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* Center horizontally */
+            position: relative;
+            z-index: 2;
+            opacity: 0.7;
+            margin: 0 auto;
+        }
+
+        #hero h1 {
+            font-style: italic;
+            font-size: 2.5rem;
+            position: relative;
+            animation: text_reveal 0.5s ease forwards;
+            color: white;
+            /* Assuming you want the text to be white */
+            width: 100%;
+            /* Ensures text alignment is managed by flexbox */
+        }
+
+        #hero::after {
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+
+
+        #hero h1 {
+            font-weight: 700;
+            text-align: center;
+            font-style: italic;
+            display: block;
+            font-size: 8.0 rem;
+            position: relative;
+            color: transparent;
+            animation: text_reveal .5s ease forwards;
+            animation-delay: 1.5s;
+        }
+
+        @media (min-width: 768px) {
+            #hero h1 {
+                font-size: 4rem;
+                /* Larger size on medium screens */
+            }
+        }
+
+        @media (min-width: 992px) {
+            #hero h1 {
+                font-size: 4rem;
+                /* Even larger on large screens */
+            }
+        }
+
+        @media (min-width: 1200px) {
+            #hero h1 {
+                font-size: 5rem;
+                /* Very large on extra large screens */
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NIS NAVBAR-->
+    <nav class=" navbar navbar-expand-lg fixed-top navbar-light bg-transparent">
+        <div class="container">
+            <div class="brand">
+                <a class="navbar-brand" href="#hero">
+                    <img class="logo" src="image.html/solalogo.png" alt="">
+                </a>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Haus</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Arbeitplätze</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Dienstlestungen</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">Eigenschaften</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link contact-button" href="#contact">Kontakt</a>
+                    </li>
+                </ul>
+
+                </form> 
+            </div>
+        </div>
+    </nav>
+    <!-- Adding some content to make the page scrollable -->
+
+
+    <script>
+        window.addEventListener('scroll', function () {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        window.addEventListener('scroll', function () {
+            var services = document.querySelectorAll('.fade-in');
+            services.forEach(function (service) {
+                if (isElementInViewport(service)) {
+                    service.classList.add('fade-in-show');
+                } else {
+                    service.classList.remove('fade-in-show');
+                }
+            });
+        });
+
+        function isElementInViewport(el) {
+            var rect = el.getBoundingClientRect();
+            return (
+                rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.bottom >= 0
+            );
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            window.addEventListener('scroll', function () {
+                var services = document.querySelectorAll('.fade-in');
+                services.forEach(function (service) {
+                    if (isElementInViewport(service)) {
+                        service.classList.add('fade-in-show');
+                    } else {
+                        service.classList.remove('fade-in-show');
+                    }
+                });
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            // Throttle updates to avoid too frequent class toggling
+            if (entry.isIntersecting && !entry.target.classList.contains('animate')) {
+                entry.target.classList.add('animate');
+            }
+        });
+    }, {
+        threshold: 0.5 // Adjust this value to trigger halfway through the element coming into view
+    });
+
+    const featureSection = document.querySelector('#features');
+    if (featureSection) {
+        observer.observe(featureSection);
+    }
+});
+
+
+
+    </script>
+
+
+    <!-- FUND NAVBAR-->
+
+
+    <!-- HERO-->
+    <section id="hero">
+        <!--<div class="hero vh-100 d-flex align-items-center" style="background-image: url('image.html/best_logo.png');"> -->
+        <div class="container vh-100 d-flex">
+            <div class="row">
+                <div>
+                    <h1>Intelligente Energie <span></span></h1>
+                    <h1>für eine <span></span></h1>
+                    <h1>intelligentere Zukunft <span></span></h1>
+                    <p class="text-white my-4"> Erfahrung mit 5-Sternen !
+                    </p>
+                    <!-- <a href="#" class="btn me-2 btn-primary"> Get Started</a> -->
+
+                    <a href="#contact" class="cta">MEHR LESEN</a>
+                </div>
+            </div>
+        </div>
+        </div> <!-- FUND HERO-->
+    </section>
+
+
+    <!--SERVICES-->
+    <section id="services">
+        <div class="container">
+            <div class="row mb-5 text-center">
+                <div class="col-md-8 mx-auto">
+                    <!-- <h5 class="text-primary"> DIENSTLESTUNGEN</h5> -->
+                    <h1>WHAT WE OFFER</h1>
+
+                </div>
+                <div class="row g-4 justify-content-center">
+                    <div class="col-lg-4 col-sm-6 mb-4 fade-in" id="service3">
+                        <div class="service card-effect" id="service1">
+                            <div class="iconbox">
+                                <i class='bx bxs-cog'></i>
+                            </div>
+                            <h5 class="mt-4 mb-2"> EXTERIOR MONTAGE</h5>
+                            <p> "Außenmontage umfasst die fachgerechte Installation von Solarmodulen, Verkabelungen und Strukturen zur Optimierung der Energiegewinnung im Freien."
+                            </p>
+                            <a href="exterio.html" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4 fade-in" id="service4">
+                        <div class="service card-effect" id="service2">
+                            <div class="iconbox">
+                                <i class='bx bxs-cog'></i>
+                            </div>
+                            <h5 class="mt-4 mb-2">INNENMONTAGE</h5>
+                            <p> 
+                                "Innenmontage umfasst die fachgerechte Installation von Wechselrichtern, Batterien und Verkabelungen zur Optimierung der Energieeffizienz in Gebäuden."
+                            </p>
+                            <a href="interior.html" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                    <!-- <div class="col-lg-4 col-sm-6"> -->
+                    <!-- <div class="service card-effect"> -->
+                    <!-- <div class="iconbox"> -->
+                    <!-- <i class='bx bxs-cog'></i> -->
+                    <!-- </div> -->
+                    <!-- <h5 class="mt-4 mb-2">VOLLWÄRMESCHUTZ</h5> -->
+                    <!-- <p>Schützt Sie vor dem Inferno extremer Temperaturen. In einer Welt, in der sengende Hitze unerbittlich sein kann, ist wirksamer Schutz von größter Bedeutung. In unserem Bau bieten wir umfassende und hochmoderne lösungen, um sie, ihre vermögenswerte und ihre umgebung vor den unerbittlichen Auswirkungen extremer Temperaturen zu schützen.</p> -->
+                    <!-- </div> -->
+                    <!-- </div> -->
+
+                    <!-- baner fillim-->
+
+                    <section id="banner" class="banner fade-in">
+                        <div class="container2">
+                            <div class="content">
+                                <h4>WIR LEISTEN HERVORRAGENDE ARBEIT,<br>EINIGE UNSERER PROJEKTE.</h4>
+                                <p>Erkunden Sie unsere Projekte, die unsere Hingabe<br> zu Solarenergie und Nachhaltigkeit zeigen...</p>
+                                <button onclick="scrollToProjects()">ARBEITSPLÄTZE</button>
+                                <div class="image-container">
+                                    <img src="image.html/left1.png" alt="" class="small-image">
+                                    <img src="image.html/right1.png" alt="" class="small-image">
+                                </div>
+
+                            </div>
+                            <div class="banner-image">
+                                <img src="image.html/reserve2.png" alt="">
+                            </div>
+                    </section>
+                    <!--baner fund-->
+                </div>
+            </div>
+        </div>
+    </section> <!--FUND SERVICES-->
+
+
+    <!--FEATURES-->
+    <section id="features">
+        <div class="container4 feature-animate">
+            <div class="row">
+                <div class=" text-center">
+                    <h1>WER WIR SIND</h1>
+                    <p>"Von Hunderten von Kunden vertraut"</p>
+                    <!-- First row of review containers -->
+                    <!-- First row of review containers -->
+                    <div class="row mt-3">
+                        <div class="col-md-4">
+                            <div class="review-container">
+                                <div class="review-stars">
+                                    &#9733; &#9733; &#9733; &#9733; &#9733;
+                                </div>
+                                <p class="review-text">Ausgezeichneter Service, sehr professionell.</p>
+                                <p class="reviewer-name">- Hans M</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="review-container">
+                                <div class="review-stars">
+                                    &#9733; &#9733; &#9733; &#9733; &#9733;
+                                </div>
+                                <p class="review-text">Sie haben unser Gebäude perfekt ausgestattet!</p>
+                                <p class="reviewer-name">- Martina Sch</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="review-container">
+                                <div class="review-stars">
+                                    &#9733; &#9733; &#9733; &#9733; &#9733;
+                                </div>
+                                <p class="review-text">Höchst empfohlen für alle, die qualitativ hochwertige
+                                    Solartechnik benötigen.</p>
+                                <p class="reviewer-name">- Stefan B</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Second row of review containers -->
+                    <div class="row mt-3">
+                        <div class="col-md-4">
+                            <div class="review-container">
+                                <div class="review-stars">
+                                    &#9733; &#9733; &#9733; &#9733; &#9733;
+                                </div>
+                                <p class="review-text">Pünktlich und ordentlich, man könnte sich nichts Besseres
+                                    wünschen.</p>
+                                <p class="reviewer-name">- Julia K</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="review-container">
+                                <div class="review-stars">
+                                    &#9733; &#9733; &#9733; &#9733; &#9733;
+                                </div>
+                                <p class="review-text">Kreativität und Detailgenauigkeit sind spitzenklasse.</p>
+                                <p class="reviewer-name">- Markus L</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="review-container">
+                                <div class="review-stars">
+                                    &#9733; &#9733; &#9733; &#9733; &#9733;
+                                </div>
+                                <p class="review-text">Beste Kundenbetreuung und außergewöhnliche Umsetzung der
+                                    Projekte.</p>
+                                <p class="reviewer-name">- Sophie W</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section><!--END FEATURES-->
+
+    <!-- Additional Content Section -->
+<section id="additional-content">
+    <div class="container py-5">
+        <div class="row">
+            <!-- How Solar Energy Works -->
+            <div class="col-md-6">
+                <h2>Wie funktioniert Solarenergie?</h2>
+                <p>Die Sonnenenergie nutzt die Energie der Sonne, um saubere, erneuerbare Energie zu erzeugen. Solarzellen wandeln Sonnenlicht direkt in Elektrizität um, indem sie den photovoltaischen Effekt nutzen. Diese Energie kann für den Haushalt, Geschäftsbetriebe und andere Anwendungen verwendet werden.</p>
+                <img src="image.html/reserve.png" alt="Solar Energy Diagram" class="img-fluid">
+            </div>
+            <!-- Benefits of Solar Energy -->
+            <div class="col-md-6">
+                <h2>Vorteile der Solarenergie</h2>
+                <ul>
+                    <li><strong>Kosteneffizienz:</strong> Solaranlagen reduzieren Ihre Stromrechnung und bieten langfristige Einsparungen.</li>
+                    <li><strong>Umweltfreundlich:</strong> Reduziert den Kohlenstoff-Fußabdruck und trägt zur Verringerung der globalen Erwärmung bei.</li>
+                    <li><strong>Energieunabhängigkeit:</strong> Verringert die Abhängigkeit von fossilen Brennstoffen und steigert die Energieautonomie.</li>
+                    <li><strong>Regierungsanreize:</strong> Viele Regierungen bieten finanzielle Anreize, um die Adoption von Solartechnologie zu fördern.</li>
+                </ul>
+            </div>
+        </div>
+        <!-- Call to Action -->
+        <div class="row mt-4">
+            <div class="col text-center">
+                <a href="solar-infromatin.html" class="btn btn-primary">Mehr erfahren</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!--CONTACT-->
+    <section id="contact">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-md-8 mx-auto text-center">
+                    <h6 class="text-primary">KONTAKT</h6>
+                    <h1>In Kontakt Kommen</h1>
+                    <p>Näher Dei Dir</p>
+                </div>
+            </div>
+
+            <form action="mailto:dragotarushi97@gmail.com" method="post" class="row g-3 justify-content-center">
+                <div class="col-md-5">
+                    <input type="text" class="form-control" placeholder="Vollständiger Name">
+                </div>
+                <div class="col-md-5">
+                    <input type="text" class="form-control" placeholder="E-mail Eingeben">
+                </div>
+                <div class="col-md-10">
+                    <input type="text" class="form-control" placeholder="Betreff Eingeben">
+                </div>
+                <div class="col-md-10">
+                    <textarea name="" id="" cols="30" rows="5" class="form-control"
+                        placeholder="Nachricht Eingeben"></textarea>
+                </div>
+                <div class="col-md-10">
+                    <button class="btn btn-primary">KONTAKT</button>
+                </div>
+            </form>
+        </div>
+    </section>
+    <!--FUND CONTACT-->
+
+    <footer>
+        <div class="footer-top">
+            <div class="container">
+                <div class="row gy-4">
+                    <div class="col-md-4">
+                        <img class="logo" src="/image.html/solalogo.png" alt="">
+                    </div>
+                    <div class="col-md-2">
+                        <h5 class="text-white">brand</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#">about</a></li>
+                            <li><a href="#">services</a></li>
+                            <li><a href="#">feautres</a></li>
+                            <li><a href="#">about</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2">
+                        <h5 class="text-white">more</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#">FAQ's</a></li>
+                            <li><a href="#">privacy&policy</a></li>
+                            <li><a href="#">about</a></li>
+                            <li><a href="#">about</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h5 class="text-white">KONTAKT</h5>
+                        <ul class="list-unstyled">
+                            <li>ADRESS :schißlerstrabe 17 , Augsburg</li>
+                            <li><a href="mailto:bushibau.info@gmail.com">EMAIL : bushibau.info@gmail.com</a></li>
+                            <li> <a href="tel:+4917624372734">PHONE NUMMER : +4917624372734</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom py-3">
+            <div class="container">
+                <div class="col-md-6">
+                    © 2023 copyright all right reserved
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
+        </script>
+
+
+    <script>
+        function scrollToProjects() {
+            const projectsSection = document.getElementById('projects');
+            if (projectsSection) {
+                projectsSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    </script>
+
+
+
+    <script src="java.js"></script>
+
+
+</body>
+
+</html>
